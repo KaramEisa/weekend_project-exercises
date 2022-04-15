@@ -114,3 +114,48 @@ console.log(summation(8));
 console.log("--2.6--");
 //! Ex2.6 - Years and Centuries
 
+//* The first century spans from the year 1 up to and including the year 100,
+//* The second - from the year 101 up to and including the year 200, etc.
+
+
+function centuryFromYear(year) {
+    let text = year.toString();
+    let arr = text.split('');
+    let z = parseInt(arr[0] + arr[1]) + 1;
+    if (arr[2] == 0 && arr[3] == 0) {
+        return arr[0] + arr[1];
+    } else {
+        return z;
+    }
+}
+console.log(centuryFromYear(1987));
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
+console.log("--2.7--");
+//! Ex2.7 - Years and Centuries
+
+//* Your task is to create a function that does four basic .
+//* The function should take three arguments - operation(string/char), value1(number), value2(number).
+//* The function should return result of numbers after applying the chosen operation.
+//! Examples
+//? basicOp('+', 4, 7) // Output: 11
+//? basicOp('-', 15, 18) basicOp('*', 5, 5) basicOp('/', 49, 7)
+//? Output: -3 // Output: 25
+//? Output: 7
+
+function basicOp(op, value1, value2) {
+
+    if (op == '+') { return value1 + value2 };
+    if (op == '-') { return value1 - value2 };
+    if (op == '*') { return value1 * value2 };
+    if (op == '/') { return value1 / value2 };
+}
+console.log(basicOp("+", 4, 2));
+    
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
